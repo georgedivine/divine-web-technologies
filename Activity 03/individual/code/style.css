@@ -1,0 +1,231 @@
+body{
+    background: white;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem 4rem;
+    border-radius: 30px;
+    width: 40%;
+    box-shadow: 0 25px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: auto;
+    margin-top: 6rem;
+}
+
+.form-container h1{
+    color: rgb(0, 85, 99);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-shadow: 0 7px 7px rgba(0, 0, 0, 0.2);
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.register button{
+    flex: 1;
+    padding: 1rem 0;
+    border: 3px solid rgb(30, 30, 30);
+    border-radius: 30px;
+    background: rgb(0, 156, 161);
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.register button:hover{
+    background-color: #005559;
+    color: white;
+}
+
+.verification{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.verification input{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+
+
+}
+
+.verification input:focus{
+    border-color: #2d2d2d;
+}
+
+.verification button{
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 1rem;
+    background: #008f99;
+    color: white;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+.verification button:hover{
+    background: #003c3f;
+}
+
+#Sign-Up {
+    display: none;
+}
+
+@media(max-width: 480px){
+    .form-container {
+        padding: 1.5rem;
+    }
+    .form-container h1 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+.navigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #024b5c;
+    color: lightgray;
+    padding: 1rem 2rem;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    z-index: 100;
+}
+
+.navigationBar h2{
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navigationBar ul{
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.navigationBar ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navigationBar ul li a:hover {
+    background: #016f80;
+}
+
+.logout-btn {
+    background: #ff2c2c;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.logout-btn:hover{
+    background: red;
+}
+
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 7rem 2rem 2rem;
+    background: white;
+    min-height:100vh;
+}
+
+.main-content{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.course-list,.sessions,.reports {
+    background: rgb(255, 255, 255);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.course-list:hover,.sessions:hover,.reports:hover {
+    transform: translateX(5px);
+}
+
+.course-list h3,.sessions h3,.reports h3 {
+    color: #024b5c;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 0.5rem;
+}
+
+.sideba{
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 8rem;
+}
+
+.sidebar h3{
+    color: darkslategray;
+    margin-bottom: 1rem;
+}
+
+.sidebar select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+@media (max-width: 780px){
+    .dashboard {
+        flex-direction: column;
+        padding-top: 8rem;
+    }
+    .sidebar {
+        position: static;
+        width: 100%;
+    }
+    .navigationBar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
