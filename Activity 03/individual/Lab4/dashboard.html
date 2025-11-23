@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="main-body">
+
+      <!--modified brreadcrumb template from free front end-->>
+
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="php/dashboard.php">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Student Dashboard</li>
+            </ol>
+        </nav>
+        <!-- /Breadcrumb -->
+
+        <div class="row gutters-sm">
+            <!-- Sidebar -->
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Student" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>Student Name</h4>
+                                <p class="text-secondary mb-1">Student ID: 12345</p>
+                                <p class="text-muted font-size-sm">Course Portal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Actions -->
+                <div class="card mt-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><button onclick="document.getElementById('availableCourses').scrollIntoView()">Available Courses</button></li>
+                        <li class="list-group-item"><button onclick="document.getElementById('enrolledCourses').scrollIntoView()">Enrolled Courses</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-8">
+                <!-- Available Courses -->
+                <div class="card mb-3" id="availableCourses">
+                    <div class="card-body">
+                        <h6 class="mb-3">Available Courses</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Introduction to Programming
+                                <form action="php/request_course.php" method="POST">
+                                    <input type="hidden" name="course_id" value="1">
+                                    <button type="submit">Request</button>
+                                </form>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Web Development 101
+                                <form action="php/request_course.php" method="POST">
+                                    <input type="hidden" name="course_id" value="2">
+                                    <button type="submit">Request</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Enrolled Courses -->
+                <div class="card mb-3" id="enrolledCourses">
+                    <div class="card-body">
+                        <h6 class="mb-3">Enrolled Courses</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">Database Fundamentals</li>
+                            <li class="list-group-item">Software Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
