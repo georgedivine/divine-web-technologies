@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style/register.css">
+</head>
+<body>
+
+<div class="login-container">
+    <h1>Create Account</h1>
+
+    <form action="php/register_process.php" method="POST">
+
+        <div class="input-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="input-group">
+            <label for="role">Account Type</label>
+            <select id="role" name="role" required style="width:100%; padding:12px; border:2px solid var(--primary); background:var(--secondary); font-size:16px;">
+                <option value="" disabled selected>Select role</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6">
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div class="footer">
+        Already have an account? <a href="index.html">Login here</a>
+    </div>
+
+</div>
+
+</body>
+</html>
